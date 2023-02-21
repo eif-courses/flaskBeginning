@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Cartoons page</title>
+{% endblock title %}
+{% block content %}
+
+     <div class="row row-cols-1 row-cols-md-6 g-4">
+        {% for cartoon in cartoons %}
+
+    <div class="col">
+                <div class="card">
+                    <img src="{{ cartoon.image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cartoon.title }}</h5>
+                        <p class="card-text">{{ cartoon.genre }}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
